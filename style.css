@@ -1,0 +1,118 @@
+/* استایل‌های عمومی */
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    direction: rtl;
+}
+
+/* کانتینر اصلی برنامه */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* بخش ورودی و دکمه */
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+#addTaskBtn {
+    padding: 12px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addTaskBtn:hover {
+    background-color: #357abd;
+}
+
+/* لیست کارها */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* هر آیتم در لیست */
+li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
+/* استایل متنی که کار را نمایش می‌دهد */
+li .task-text {
+    flex-grow: 1;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+/* کلاس برای کارهای انجام شده */
+li.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* دکمه‌های عملیات (حذف) */
+.actions button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px; /* برای زبان فارسی */
+    transition: color 0.3s;
+}
+
+.delete-btn {
+    color: #e74c3c;
+}
+
+.delete-btn:hover {
+    color: #c0392b;
+}
